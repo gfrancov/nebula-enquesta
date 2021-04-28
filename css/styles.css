@@ -233,3 +233,62 @@ label {
     background-color: rgb(255, 255, 255);
     color: #b042b4;
 }
+
+/* Resultat */
+.negreta {
+    font-weight: 700;
+}
+.resultat p {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 10px;
+}
+.titol-resultat {
+    margin: 0;
+    padding: 0;
+    margin-top: 30px;
+}
+.resultat p.grafic-recte {
+    color: rgb(252, 252, 252);
+    padding: 7px;
+    padding-right: 0;
+    font-weight: 500;
+    font-size: 9px;
+    margin: 0;
+}
+.color-verd {
+    background-color: rgb(4, 136, 4);
+}
+.color-vermell {
+    background-color: rgb(219, 7, 7);
+}
+.color-blau {
+    background-color: rgb(4, 95, 156);
+}
+.color-taronja {
+    background-color: rgb(245, 110, 0);
+}
+p.enunciat-resultat {
+    margin: 0;
+    margin-top: 20px;
+    padding: 0;
+    font-weight: 600;
+}
+.buscador {
+    border: 2px solid #b042b4;
+    padding: 8px;
+    border-radius: 8px;
+    color: #b042b4;
+    font-size: 15px;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    margin-bottom: 10px;
+}
+.esquerra-boto {
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    margin-top: -7px;
+}
+div.esquerra-boto input {
+    text-align: left;
+}

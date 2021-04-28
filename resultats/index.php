@@ -26,7 +26,8 @@
                     include "../credencials.php";
 
                     if($_POST['usuari'] === $usuari && $_POST['contrasenya'] === $contrasenya) {
-                        echo("<p>Benvingut " . $_POST['usuari'] . "</p>");
+                        echo("<p>Benvingut " . $_POST['usuari'] . " al panell per veure els resultats.</p>");
+                        echo("<p class='botons'><a href='resultats.php'><i class='fas fa-chart-line'></i> Veure els resultats</a></p>");
                         session_start();
                         $_SESSION['usuari'] = $usuari;
                         $_SESSION['loguejat'] = 'true';
