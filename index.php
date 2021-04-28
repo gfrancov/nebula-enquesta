@@ -32,14 +32,16 @@
                     <?php
                 } else {
 
+                    include "credencials.php";
+
                     //Connexió amb la base de dades
-                    $connexio = mysqli_connect("########", "########", "########", "########");
+                    $connexio = mysqli_connect('localhost', $bddUsuari, $bddContra, $bddBase);
 
                     if (!$connexio) {
                         die("<p class='error-text'>Connexió fallida" . mysqli_connect_error() . "</p>");
                     }
 
-                    // Comprovació de si el correu ja ha enviat una
+                    // Comprovació de si el correu ja ha enviat un formulari
                     $correu = $_POST['correu'];
 
                     $comprovacioSQL = "SELECT * FROM enquesta WHERE correu = '$correu'";
@@ -71,12 +73,13 @@
                             $ip = $_SERVER['REMOTE_ADDR'];
                         }
 
+                        // Volem saber si ens ha omplert el quadrant d' "altres".
                         if(empty($_POST['perqueWebAltres'])) {
                             $inserirSQL = "INSERT INTO enquesta (correu, nomcognoms, edat, webPropi, tendriesWeb, perqueWeb, preuWeb, preuDeu, ip) VALUES ('$correu', '$nomcognoms', '$edat', '$webPropi', '$tendriesWeb', '$perqueWeb', '$preuWeb', '$preu10', '$ip')";
                             
                             if(mysqli_query($connexio, $inserirSQL)) {
                                 echo("<p>Gràcies " . $nomcognoms . " per omplir l'enquesta!</p>");
-                                echo("<p class='botons'><a href='https://www.nebula.cat/'><i class='fas fa-server'></i>Nebula Hosting</a></p>");
+                                echo("<p class='botons'><a href='https://www.nebula.cat/'><i class='fas fa-server'></i> Nebula Hosting</a></p>");
 
                             } else {
                                 echo("<p class='error-text'>Ho sento " . $nomcognoms . " hi ha algun problema amb la base de dades!</p>");
@@ -164,7 +167,7 @@
 
                     <div class="camp-formulari">
 
-                        <p class="enunciat">Si la resposta anterior és altres, indica-ho:</p>
+                        <p class="enunciat">Si la resposta anterior és altres, indica per a què voldries un lloc web:</p>
                         <input class="camp-text" type="text" name="perqueWebAltres" id="perqueWebAltres"/>
 
                     </div>
@@ -180,7 +183,7 @@
 
                         <p class="enunciat">Creus que un preu al voltant dels 10€ (anualment) és un bon preu?</p>
                         <p><input type="radio" id="preuDeu-elevat" name="preuDeu" value="elevat"/><label for="preuDeu-elevat">Em sembla un preu massa elevat.</label></p>
-                        <p><input type="radio" id="preuDeu-assequible" name="preuDeu" value="assequible"/><label for="preuDeu-assequible" required>És un preu assequible, és un preu raonable.</label></p>
+                        <p><input type="radio" id="preuDeu-assequible" name="preuDeu" value="assequible"/><label for="preuDeu-assequible" required>És un preu assequible, raonable.</label></p>
                         <p><input type="radio" id="preuDeu-economic" name="preuDeu" value="economic"/><label for="preuDeu-economic">És un preu econòmic pel servei que es.</label></p>
                     </div>
 

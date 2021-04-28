@@ -189,3 +189,47 @@ label {
     background-color: #FFFFFF;
     color: #242424;
 }
+
+/* Login */
+.login {
+    text-align: center;
+}
+.enunciat-login {
+    margin: 0;
+    padding: 0;
+    margin-top: 20px;
+}
+.enunciat-login label {
+    font-weight: 600;
+    font-size: 16px;
+}
+.login-camp {
+    padding: 6px;
+    color: #b042b4;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid #b042b4;
+    font-weight: 400;
+    font-size: 15px;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    border-radius: 6px;
+}
+.login-camp::placeholder {
+    color: #b042b4;
+    font-weight: 500;
+    font-size: 15px;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+.enunciat-login input {
+    background-color: #b042b4;
+    border: 2px solid #b042b4;
+    color: rgb(255, 255, 255);
+    padding: 6px;
+    font-size: 15px;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    border-radius: 6px;
+}
+.enunciat-login input:hover {
+    background-color: rgb(255, 255, 255);
+    color: #b042b4;
+}
