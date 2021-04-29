@@ -139,9 +139,9 @@ session_start();
                         $percElevat = $elevat * 100 / $total;
                         $percAssequible = $assequible * 100 / $total;
                         $percEconomic = $economic * 100 / $total;
-                        echo("<p class='color-verd grafic-recte' style='width: ". ($percElevat * 2 + 34) . "px'>" . number_format($percElevat,0) . "%</p>");
-                        echo("<p class='color-vermell grafic-recte' style='width: ". ($percAssequible * 2 + 34) . "px'>" . number_format($percAssequible,0) . "%</p>");
-                        echo("<p class='color-blau grafic-recte' style='width: ". ($percEconomic * 2 + 34) . "px'>" . number_format($percEconomic,0) . "%</p>");
+                        echo("<p class='color-verd grafic-recte' style='width: ". ($percElevat * 2 + 34) . "px'>ELEVAT " . number_format($percElevat,0) . "%</p>");
+                        echo("<p class='color-vermell grafic-recte' style='width: ". ($percAssequible * 2 + 34) . "px'>ASSEQUIBLE " . number_format($percAssequible,0) . "%</p>");
+                        echo("<p class='color-blau grafic-recte' style='width: ". ($percEconomic * 2 + 34) . "px'>ECONÒMIC " . number_format($percEconomic,0) . "%</p>");
 
                         ?>
 
@@ -179,7 +179,7 @@ session_start();
 
                     ?>
 
-            <p class="error-text">Has d'iniciar sessió per a poder loguejar-te aqui</p>
+            <p class="error-text">Has d'iniciar sessió per a poder accedir aqui</p>
 
                     <?php
                     
