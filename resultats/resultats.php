@@ -139,9 +139,9 @@ session_start();
                         $percElevat = $elevat * 100 / $total;
                         $percAssequible = $assequible * 100 / $total;
                         $percEconomic = $economic * 100 / $total;
-                        echo("<p class='color-verd grafic-recte' style='width: ". ($percElevat * 2 + 34) . "px'>ELEVAT " . number_format($percElevat,0) . "%</p>");
-                        echo("<p class='color-vermell grafic-recte' style='width: ". ($percAssequible * 2 + 34) . "px'>ASSEQUIBLE " . number_format($percAssequible,0) . "%</p>");
-                        echo("<p class='color-blau grafic-recte' style='width: ". ($percEconomic * 2 + 34) . "px'>ECONÒMIC " . number_format($percEconomic,0) . "%</p>");
+                        echo("<p class='color-verd grafic-recte' style='width: ". ($percElevat * 4 + 34) . "px'>ELEVAT " . number_format($percElevat,0) . "%</p>");
+                        echo("<p class='color-vermell grafic-recte' style='width: ". ($percAssequible * 4 + 34) . "px'>ASSEQUIBLE " . number_format($percAssequible,0) . "%</p>");
+                        echo("<p class='color-blau grafic-recte' style='width: ". ($percEconomic * 4 + 34) . "px'>ECONÒMIC " . number_format($percEconomic,0) . "%</p>");
 
                         ?>
 
