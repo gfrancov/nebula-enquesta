@@ -102,21 +102,21 @@ session_start();
 
                         echo("<h2 class='titol-resultat'>Edat</h2><p>Quina es la teva edat?</p>");
                         $mitjaEdat = $sumaEdat / $total;
-                        echo("<p>La mitja és de <span class='negreta'>" . $mitjaEdat . " anys</span>.</p>");
+                        echo("<p>La mitja és de <span class='negreta'>" . number_format($mitjaEdat,0) . " anys</span>.</p>");
 
                         // Gràfic Web Propi
                         echo("<h2 class='titol-resultat'>Web propia</h2><p>Tens un lloc web propi?</p>");
                         $percWebPropiSi = $webPropiSi * 100 / $total; 
-                        echo("<p class='color-verd grafic-recte' style='width: ". ($percWebPropiSi * 2 + 34) . "px'>" . $percWebPropiSi . "% (" . $webPropiSi . ")</p>");
+                        echo("<p class='color-verd grafic-recte' style='width: ". ($percWebPropiSi * 2 + 34) . "px'>SI " . number_format($percWebPropiSi,0) . "%</p>");
                         $percWebPropiNo = $webPropiNo * 100 / $total; 
-                        echo("<p class='color-vermell grafic-recte' style='width: ". ($percWebPropiNo * 2 + 34) . "px'>" . $percWebPropiNo . "% (" . $webPropiNo . ")</p>");
+                        echo("<p class='color-vermell grafic-recte' style='width: ". ($percWebPropiNo * 2 + 34) . "px'>NO " . number_format($percWebPropiNo,0) . "%</p>");
 
                         // Gràfic Tindries Web
                         echo("<h2 class='titol-resultat'>Tindries web</h2><p>Si la resposta anterior és no, has pensat algun cop en tenir un lloc web?</p>");
                         $percTendriesWebSi = $tendriesWebSi * 100 / $total;
-                        echo("<p class='color-verd grafic-recte' style='width: ". ($percTendriesWebSi * 2 + 34) . "px'>" . $percTendriesWebSi . "% (" . $tendriesWebSi . ")</p>");
+                        echo("<p class='color-verd grafic-recte' style='width: ". ($percTendriesWebSi * 2 + 34) . "px'>SI " . number_format($percTendriesWebSi,0) . "%</p>");
                         $percTendriesWebNo = $tendriesWebNo * 100 / $total;
-                        echo("<p class='color-vermell grafic-recte' style='width: ". ($percTendriesWebNo * 2 + 34) . "px'>" . $percTendriesWebNo . "% (" . $tendriesWebNo . ")</p>");
+                        echo("<p class='color-vermell grafic-recte' style='width: ". ($percTendriesWebNo * 2 + 34) . "px'>NO " . number_format($percTendriesWebNo,0) . "%</p>");
 
                         // Gràfic Perque Web
                         echo("<h2 class='titol-resultat'>Perque web</h2><p>Si la resposta anterior és no, has pensat algun cop en tenir un lloc web?</p>");
@@ -124,24 +124,24 @@ session_start();
                         $percEmpresarial = $empresarial * 100 / $total;
                         $percAficions = $aficions * 100 / $total;
                         $percAltres = $altres * 100 / $total;
-                        echo("<p class='color-verd grafic-recte' style='width: ". ($percPersonal * 2 + 34) . "px'>" . $percPersonal . "% (" . $personal . ")</p>");
-                        echo("<p class='color-vermell grafic-recte' style='width: ". ($percEmpresarial * 2 + 34) . "px'>" . $percEmpresarial . "% (" . $empresarial . ")</p>");
-                        echo("<p class='color-blau grafic-recte' style='width: ". ($percAficions * 2 + 34) . "px'>" . $percAficions . "% (" . $aficions . ")</p>");
-                        echo("<p class='color-taronja grafic-recte' style='width: ". ($percAltres * 2 + 34) . "px'>" . $percAltres . "% (" . $altres . ")</p>");
+                        echo("<p class='color-verd grafic-recte' style='width: ". ($percPersonal * 4 + 34) . "px'>PERSONAL " . number_format($percPersonal,0) . "%</p>");
+                        echo("<p class='color-vermell grafic-recte' style='width: ". ($percEmpresarial * 4 + 34) . "px'>EMPRESARIAL " . number_format($percEmpresarial,0) . "%</p>");
+                        echo("<p class='color-blau grafic-recte' style='width: ". ($percAficions * 4 + 34) . "px'>AFICIONS " . number_format($percAficions,0) . "%</p>");
+                        echo("<p class='color-taronja grafic-recte' style='width: ". ($percAltres * 4 + 34) . "px'>ALTRES " . number_format($percAltres,0) . "%</p>");
 
                         // Gràfic Preu Lloc Web
                         echo("<h2 class='titol-resultat'>Preu</h2><p>Indica el preu que creus que hauria de tenir un lloc web (anualment):</p>");
                         $mitjaPreus = $sumaPreus / $total;
-                        echo("<p>La mitja és de <span class='negreta'>" . $mitjaPreus . " euros</span>.</p>");
+                        echo("<p>La mitja és de <span class='negreta'>" . number_format($mitjaPreus,0) . " euros</span>.</p>");
 
                         // Gràfic preu 10
                         echo("<h2 class='titol-resultat'>Preu 10</h2><p>Creus que un preu al voltant dels 10€ (anualment) és un bon preu?</p>");
                         $percElevat = $elevat * 100 / $total;
                         $percAssequible = $assequible * 100 / $total;
                         $percEconomic = $economic * 100 / $total;
-                        echo("<p class='color-verd grafic-recte' style='width: ". ($percElevat * 2 + 34) . "px'>" . $percElevat . "% (" . $elevat . ")</p>");
-                        echo("<p class='color-vermell grafic-recte' style='width: ". ($percAssequible * 2 + 34) . "px'>" . $percAssequible . "% (" . $assequible . ")</p>");
-                        echo("<p class='color-blau grafic-recte' style='width: ". ($percEconomic * 2 + 34) . "px'>" . $percEconomic . "% (" . $economic . ")</p>");
+                        echo("<p class='color-verd grafic-recte' style='width: ". ($percElevat * 2 + 34) . "px'>" . number_format($percElevat,0) . "%</p>");
+                        echo("<p class='color-vermell grafic-recte' style='width: ". ($percAssequible * 2 + 34) . "px'>" . number_format($percAssequible,0) . "%</p>");
+                        echo("<p class='color-blau grafic-recte' style='width: ". ($percEconomic * 2 + 34) . "px'>" . number_format($percEconomic,0) . "%</p>");
 
                         ?>
 

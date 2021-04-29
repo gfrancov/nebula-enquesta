@@ -175,7 +175,7 @@
                     <div class="camp-formulari">
 
                         <p class="enunciat">Indica el preu que creus que hauria de tenir un lloc web (anualment):</p>
-                        <input class="camp-text" type="text" name="preuWeb" id="preuWeb" placeholder="Exemple: 34" required/>
+                        <input class="camp-text" type="number" name="preuWeb" id="preuWeb" placeholder="Només un número! Sense símbol '€'" required/>
 
                     </div>
 
