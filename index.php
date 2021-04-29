@@ -154,7 +154,7 @@
 
                     <div class="camp-formulari">
 
-                        <p class="enunciat">Per què voldries arribar a tenir un lloc web?</p>
+                        <p class="enunciat">Per a squè voldries arribar a tenir un lloc web?</p>
                         <select name="perqueWeb" id="perqueWeb" required>
                             <option value="personal">Personal</option>
                             <option value="empresarial">Empresarial</option>
